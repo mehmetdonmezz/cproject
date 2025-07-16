@@ -1,4 +1,3 @@
-
 # Get Next Line - C Dilinde Satır Okuma Fonksiyonu
 
 **Bu projenin amacı, C dilinde bir dosyadan veya stdin'den satır satır veri okuma işlemini gerçekleştirecek bir fonksiyon yazmaktır. Bu proje, dosya okuma işlemlerine dair temel anlayışı geliştirirken, dinamik bellek yönetimi ve buffer yönetimi gibi konularda deneyim kazandırır.**
@@ -62,6 +61,53 @@ Bonus kısmında, `get_next_line` fonksiyonunun daha esnek hale getirilmesi bekl
 * **EOF Durumunun Yönetilmesi:**
   Fonksiyonun EOF durumunu doğru şekilde yönetmesi ve bir dosyanın sonunda okuma işlemi bitmeden diğer dosyaya geçiş yapması sağlanmalıdır.
 
+### Yardımcı Fonksiyonlar:
+
+Proje, fonksiyonların doğru şekilde çalışabilmesi için aşağıdaki yardımcı fonksiyonlara sahip olacaktır:
+
+* **`ft_strjoin`**:
+  * İki karakter dizisini birleştirir. Bu yardımcı fonksiyon, okunan verilerin birleştirilmesi için kullanılır.
+
+* **`ft_strdup`**:
+  * Karakter dizisinin bir kopyasını oluşturur. Bu fonksiyon, okunan verilerin geçici olarak depolanması için kullanılabilir.
+
+* **`ft_strlen`**:
+  * Bir karakter dizisinin uzunluğunu hesaplar. Satır uzunluğunun hesaplanmasında ve bellek yönetiminde faydalıdır.
+
+* **`ft_putchar_fd`**:
+  * Bir karakteri belirtilen dosya tanımlayıcısına yazar. Çıktı üretme işlemi için `write()` fonksiyonunu kullanır.
+
+* **`ft_strchr`**:
+  * Bir karakter dizisinde belirtilen karakteri arar. Satır sonunu bulmak için kullanılır.
+
+### Neyi Nerede ve Neden Kullandık?
+
+Bu bölümde, projenin nasıl çalıştığını ve hangi fonksiyonların hangi durumlarda kullanıldığını açıklayacağız.
+
+#### **`get_next_line` Fonksiyonu**
+* **Nerede Kullanılır:** Dosya okuma işlemi yaparken, `get_next_line` fonksiyonu her seferinde bir satır okur.
+* **Neden Kullanılır:** Bu fonksiyon, dosyadaki her satırı okumak için temel işlevi yerine getirir. Dosya okuma işlemi bitene kadar çalışır ve her seferinde satır okur.
+
+#### **`ft_strjoin` Fonksiyonu**
+* **Nerede Kullanılır:** Satırları birleştirirken, okunan veriler genellikle bir buffer'a eklenir ve eski verilerle birleştirilir.
+* **Neden Kullanılır:** Bu fonksiyon, dinamik olarak okunan satırları birleştirmek ve tam satırları elde etmek için kullanılır.
+
+#### **`ft_strdup` Fonksiyonu**
+* **Nerede Kullanılır:** Okunan satırların bir kopyasının alınması gerektiğinde.
+* **Neden Kullanılır:** Satır verileri bir buffer'da saklanırken, orijinal veri kaybolmadan işlenmelidir. `ft_strdup`, okunan satırların güvenli bir şekilde saklanmasına olanak tanır.
+
+#### **`ft_strlen` Fonksiyonu**
+* **Nerede Kullanılır:** Satır uzunluğunu hesaplamak gerektiğinde.
+* **Neden Kullanılır:** Satırın sonuna gelindiğinde, karakter dizisinin uzunluğunun bilinmesi gerekir. Bu fonksiyon, karakter dizisinin uzunluğunu hesaplayarak doğru bellek yönetimini sağlar.
+
+#### **`ft_putchar_fd` Fonksiyonu**
+* **Nerede Kullanılır:** Çıktı işlemlerinde, veriyi çıktı olarak yazdırırken.
+* **Neden Kullanılır:** Verileri ekrana veya dosyaya yazdırmak için düşük seviyeli `write()` fonksiyonu kullanılır. Bu fonksiyon, yazma işlemini güvenli ve etkili bir şekilde gerçekleştirir.
+
+#### **`ft_strchr` Fonksiyonu**
+* **Nerede Kullanılır:** Satırın sonunu bulmak ve veriyi parçalara ayırmak gerektiğinde.
+* **Neden Kullanılır:** Satırların sonunu (`\n`) tespit etmek ve okunan veriyi bölmek için gereklidir. Bu fonksiyon, bir karakter dizisinde belirtilen karakteri arar ve satır sonunun doğru şekilde tespit edilmesini sağlar.
+
 ### Testler ve Örnek Kullanım:
 
 ```c
@@ -74,30 +120,14 @@ int main() {
     char *line;
 
     while (get_next_line(fd, &line) > 0) {
-        printf("%s
-", line);
+        printf("%s\n", line);
         free(line);  // Bellek yönetimi
     }
 
     close(fd);
     return 0;
 }
-```
 
-### Fonksiyonlar:
-
-* **`get_next_line`**:
-  * Satır okuma işlemini başlatır ve dosya tanımlayıcısından (fd) veri okur.
-  * Okunan satır bir karakter dizisi olarak geri döndürülür.
-
-* **`ft_strjoin`**:
-  * İki karakter dizisini birleştirir.
-
-* **`ft_strdup`**:
-  * Karakter dizisinin bir kopyasını oluşturur.
-
-* **`ft_strlen`**:
-  * Bir karakter dizisinin uzunluğunu hesaplar.
 
 ### Kurulum:
 
