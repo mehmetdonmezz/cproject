@@ -43,6 +43,25 @@
 * **Daha Fazla Veri Okuma:**
   * Eğer satırda veri bitmediyse, fonksiyon devam eder ve yeni veri okur.
 
+### Bonus Kısmı:
+
+Bonus kısmında, `get_next_line` fonksiyonunun daha esnek hale getirilmesi beklenir. Aşağıdaki özelliklerin eklenmesi gerekmektedir:
+
+* **Daha Fazla Dosya Tanımlayıcısı Desteği:**
+  `get_next_line` fonksiyonu, sadece bir dosya tanımlayıcısından (fd) veri okumamalıdır. Bonus kısmı ile fonksiyon, birden fazla dosya tanımlayıcısına (fd) aynı anda hizmet verebilecek şekilde geliştirilebilir.
+
+* **Buffer Boyutunun Dinamik Olarak Belirlenmesi:**
+  Buffer boyutunun sabit olmaması gerekir. Kullanıcı tarafından belirtilen bir boyutla dinamik olarak buffer boyutunun belirlenmesi sağlanabilir.
+
+* **Dosya Tanımlayıcıları Arasında Koşullu Okuma:**
+  Bonus kısmında, fonksiyonun birden fazla dosya tanımlayıcısı ile eşzamanlı olarak çalışması sağlanmalıdır. Kullanıcı birden fazla dosya okuma işlemi yaparken her dosyadan sırasıyla veri alabilmelidir.
+
+* **Hata Yönetiminin İyileştirilmesi:**
+  Fonksiyon, hata durumlarını daha ayrıntılı şekilde ele alacak şekilde güncellenebilir. Her dosya tanımlayıcısı için hata kodları döndürülebilir.
+
+* **EOF Durumunun Yönetilmesi:**
+  Fonksiyonun EOF durumunu doğru şekilde yönetmesi ve bir dosyanın sonunda okuma işlemi bitmeden diğer dosyaya geçiş yapması sağlanmalıdır.
+
 ### Testler ve Örnek Kullanım:
 
 ```c
