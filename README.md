@@ -1,3 +1,4 @@
+
 # Get Next Line - C Dilinde Satır Okuma Fonksiyonu
 
 **Bu projenin amacı, C dilinde bir dosyadan veya stdin'den satır satır veri okuma işlemini gerçekleştirecek bir fonksiyon yazmaktır. Bu proje, dosya okuma işlemlerine dair temel anlayışı geliştirirken, dinamik bellek yönetimi ve buffer yönetimi gibi konularda deneyim kazandırır.**
@@ -106,7 +107,29 @@ Bu bölümde, projenin nasıl çalıştığını ve hangi fonksiyonların hangi 
 
 #### **`ft_strchr` Fonksiyonu**
 * **Nerede Kullanılır:** Satırın sonunu bulmak ve veriyi parçalara ayırmak gerektiğinde.
-* **Neden Kullanılır:** Satırların sonunu (`\n`) tespit etmek ve okunan veriyi bölmek için gereklidir. Bu fonksiyon, bir karakter dizisinde belirtilen karakteri arar ve satır sonunun doğru şekilde tespit edilmesini sağlar.
+* **Neden Kullanılır:** Satırların sonunu (`
+`) tespit etmek ve okunan veriyi bölmek için gereklidir. Bu fonksiyon, bir karakter dizisinde belirtilen karakteri arar ve satır sonunun doğru şekilde tespit edilmesini sağlar.
+
+### Dosya Yapısı:
+
+Proje aşağıdaki dosya yapısına sahiptir:
+
+```
+get_next_line/
+│
+├── get_next_line.c         # Ana fonksiyonun bulunduğu dosya. get_next_line() fonksiyonunu içerir.
+├── get_next_line.h         # Header dosyası, fonksiyon prototipleri ve gerekli kütüphaneleri içerir.
+├── utils.c                 # Yardımcı fonksiyonların bulunduğu dosya (ft_strjoin, ft_strdup, ft_strlen, vs.).
+├── Makefile                # Projeyi derlemek için kullanılan makefile.
+├── README.md               # Proje hakkında açıklamaları içeren dosya.
+└── example.txt             # Test amaçlı kullanılan örnek dosya.
+```
+
+* **`get_next_line.c`**: Projenin ana fonksiyonu olan `get_next_line` fonksiyonunu içerir. Bu fonksiyon dosyadan satır okuma işlemini gerçekleştirir.
+* **`get_next_line.h`**: Projede kullanılan fonksiyon prototiplerinin yer aldığı başlık dosyasıdır.
+* **`utils.c`**: Yardımcı fonksiyonlar bu dosyada toplanmıştır. `ft_strjoin`, `ft_strdup`, `ft_strlen`, `ft_putchar_fd`, ve `ft_strchr` gibi fonksiyonlar burada bulunur.
+* **`Makefile`**: Projeyi derlemek için kullanılan makefile dosyasıdır.
+* **`example.txt`**: `get_next_line` fonksiyonunun test edilmesi için örnek bir dosya.
 
 ### Testler ve Örnek Kullanım:
 
@@ -120,14 +143,15 @@ int main() {
     char *line;
 
     while (get_next_line(fd, &line) > 0) {
-        printf("%s\n", line);
+        printf("%s
+", line);
         free(line);  // Bellek yönetimi
     }
 
     close(fd);
     return 0;
 }
-
+```
 
 ### Kurulum:
 
@@ -161,5 +185,4 @@ close(fd);
 
 ---
 
-### Created by Sude Naz Karayıldırım
-
+### Created by [Adınız]
