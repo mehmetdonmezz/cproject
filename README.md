@@ -110,7 +110,7 @@ Bu bölümde, projenin nasıl çalıştığını ve hangi fonksiyonların hangi 
 * **Neden Kullanılır:** Satırların sonunu (`
 `) tespit etmek ve okunan veriyi bölmek için gereklidir. Bu fonksiyon, bir karakter dizisinde belirtilen karakteri arar ve satır sonunun doğru şekilde tespit edilmesini sağlar.
 
-### Dosya Yapısı:
+### Dosya Yapısı 📁:
 
 Proje aşağıdaki dosya yapısına sahiptir:
 
