@@ -76,14 +76,12 @@ get_next_line/
 ├── utils.c                 # Yardımcı fonksiyonların bulunduğu dosya (ft_strjoin, ft_strdup, ft_strlen, vs.).
 ├── Makefile                # Projeyi derlemek için kullanılan makefile.
 ├── README.md               # Proje hakkında açıklamaları içeren dosya.
-└── example.txt             # Test amaçlı kullanılan örnek dosya.
 ```
 
 * **`get_next_line.c`**: Projenin ana fonksiyonu olan `get_next_line` fonksiyonunu içerir. Bu fonksiyon dosyadan satır okuma işlemini gerçekleştirir.
 * **`get_next_line.h`**: Projede kullanılan fonksiyon prototiplerinin yer aldığı başlık dosyasıdır.
 * **`utils.c`**: Yardımcı fonksiyonlar bu dosyada toplanmıştır. `ft_strjoin`, `ft_strdup`, `ft_strlen`, `ft_putchar_fd`, ve `ft_strchr` gibi fonksiyonlar burada bulunur.
 * **`Makefile`**: Projeyi derlemek için kullanılan makefile dosyasıdır.
-* **`example.txt`**: `get_next_line` fonksiyonunun test edilmesi için örnek bir dosya.
 
 ### Testler ve Örnek Kullanım:
 
@@ -112,7 +110,7 @@ int main() {
 Projeyi yerel sisteminize klonlamak için aşağıdaki komutu kullanabilirsiniz:
 
 ```bash
-git clone https://github.com/kullanici_adiniz/get_next_line.git
+git clone https://github.com/skarayil/get_next_line.git
 ```
 
 ### Kullanım:
