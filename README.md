@@ -73,7 +73,7 @@ get_next_line/
 │
 ├── get_next_line.c               # Ana fonksiyonun bulunduğu dosya. get_next_line() fonksiyonunu içerir.
 ├── get_next_line.h               # Header dosyası, fonksiyon prototipleri ve gerekli kütüphaneleri içerir.
-├── get_next_line_utils.c         # Yardımcı fonksiyonların bulunduğu dosya (ft_strjoin, ft_strdup, ft_strlen, vs.).
+├── get_next_line_utils.c         # Yardımcı fonksiyonların bulunduğu dosya.
 ├── README.md                     # Proje hakkında açıklamaları içeren dosya.
 ├── get_next_line_bonus.c         # Bonus bölümü: çoklu dosya tanımlayıcıları.
 ├── get_next_line_bonus_utils.c   # Bonus yardımcı işlevler.
