@@ -73,15 +73,11 @@ get_next_line/
 │
 ├── get_next_line.c         # Ana fonksiyonun bulunduğu dosya. get_next_line() fonksiyonunu içerir.
 ├── get_next_line.h         # Header dosyası, fonksiyon prototipleri ve gerekli kütüphaneleri içerir.
-├── utils.c                 # Yardımcı fonksiyonların bulunduğu dosya (ft_strjoin, ft_strdup, ft_strlen, vs.).
-├── Makefile                # Projeyi derlemek için kullanılan makefile.
+├── get_next_line_utils.c   # Yardımcı fonksiyonların bulunduğu dosya (ft_strjoin, ft_strdup, ft_strlen, vs.).
 ├── README.md               # Proje hakkında açıklamaları içeren dosya.
+├── bonus.c                 # Projede Bulunan bonus bölümü.
 ```
 
-* **`get_next_line.c`**: Projenin ana fonksiyonu olan `get_next_line` fonksiyonunu içerir. Bu fonksiyon dosyadan satır okuma işlemini gerçekleştirir.
-* **`get_next_line.h`**: Projede kullanılan fonksiyon prototiplerinin yer aldığı başlık dosyasıdır.
-* **`utils.c`**: Yardımcı fonksiyonlar bu dosyada toplanmıştır. `ft_strjoin`, `ft_strdup`, `ft_strlen`, `ft_putchar_fd`, ve `ft_strchr` gibi fonksiyonlar burada bulunur.
-* **`Makefile`**: Projeyi derlemek için kullanılan makefile dosyasıdır.
 
 ### Testler ve Örnek Kullanım:
 
