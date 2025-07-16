@@ -185,4 +185,4 @@ close(fd);
 
 ---
 
-### Created by [Adınız]
+### Created by SUDE NAZ KARAYILDIRIM
